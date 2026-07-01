@@ -23,8 +23,8 @@ export const profile = {
 
 export const stats = [
   { value: '5', suffix: '+', label: 'Years shipping', sub: 'production backend' },
-  { value: '4', suffix: '', label: 'Flagship projects', sub: 'open source' },
-  { value: '1', suffix: '', label: 'Published to PyPI', sub: 'pip install envsafe' },
+  { value: '5', suffix: '', label: 'Flagship projects', sub: 'open source' },
+  { value: '2', suffix: '', label: 'Published to PyPI', sub: 'envsafe · secheaders' },
   { value: 'MSc', suffix: '', label: 'Cyber Security', sub: 'Berlin · 2025–27' },
 ] as const;
 
@@ -105,6 +105,22 @@ export const projects: Project[] = [
       { label: 'retrieval', value: 'ChromaDB vectors' },
       { label: 'guard', value: 'prompt-injection' },
       { label: 'coverage', value: '96%' },
+    ],
+  },
+  {
+    id: 'secheaders',
+    index: '05',
+    name: 'secheaders',
+    tagline: 'HTTP security-header auditor, shipped to PyPI',
+    description:
+      'A CLI that scans a URL’s HTTP response headers, scores them 0–100 with a letter grade and returns actionable fixes for XSS, clickjacking, MIME-sniffing and protocol-downgrade weaknesses. Batch scanning, JSON/HTML/CSV output and a --fail-under gate for CI.',
+    highlight: 'Published to PyPI — drop it into any pipeline as a security gate.',
+    tech: ['Python', 'PyPI', 'CLI', 'CI/CD'],
+    github: 'https://github.com/pabloncf/secheaders',
+    metrics: [
+      { label: 'scoring', value: '0–100 + grade' },
+      { label: 'output', value: 'JSON · HTML · CSV' },
+      { label: 'ci gate', value: '--fail-under' },
     ],
   },
 ];
